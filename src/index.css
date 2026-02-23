@@ -1,0 +1,9 @@
+/* c:\Users\Admin\OneDrive\Desktop\gul-perfume\perfume-x\src\index.css */
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #050505;
+  color: #e5e5e5;
+}
