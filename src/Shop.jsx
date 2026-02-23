@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect, useMemo, useRef } from "react";
 import {
   ShoppingBag,
   Star,
@@ -35,15 +35,12 @@ const getImage = (name) => {
   return null;
 };
 
-const Shop = ({
-  cart,
-  addToCart,
-  updateQuantity,
-  removeFromCart,
-}) => {
+const Shop = ({ cart, addToCart, updateQuantity, removeFromCart }) => {
   const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [cartOpen, setCartOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const searchInputRef = useRef(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [visibleCount, setVisibleCount] = useState(8);
@@ -65,13 +62,14 @@ const Shop = ({
   const pourHomme = [
     "Sultanat",
     "Officer",
-    "Shehen sha",
+    "Shehensha",
     "Markhor",
     "Bluish Vally",
     "Fantasticdream",
     "just impress",
     "Daimond",
     "Black code",
+    "Elegant man",
   ];
 
   const pourFemme = ["Sukoon", "Lilly Gold(s)", "moonwalk(w)"];
@@ -79,7 +77,7 @@ const Shop = ({
   const products = useMemo(() => {
     // Perfume Data List
     const productList = [
-      { name: "Shehen sha", price: 3000 },
+      { name: "Shehensha", price: 3000 },
       { name: "Fantasticdream", price: 3200 },
       { name: "Sultanat", price: 2900 },
       { name: "Dreamscent", price: 3500 },
@@ -96,7 +94,7 @@ const Shop = ({
       { name: "Legend Person", price: 4000 },
       { name: "Wanted signature", price: 2700 },
       { name: "Bluish Vally", price: 2400 },
-      { name: "Elefant man", price: 2650 },
+      { name: "Elegant man", price: 2650 },
     ];
 
     // Generating Product Objects
@@ -171,6 +169,7 @@ const Shop = ({
   // Cart Functions
   const handleAddToCart = (product) => {
     addToCart(product);
+    setCartOpen(true);
     setToast(`${product.name} Added to Cart`);
     setTimeout(() => setToast(null), 2000);
   };
@@ -229,14 +228,36 @@ const Shop = ({
           </div>
 
           <div className="flex items-center gap-2 md:gap-6">
-            <div className="flex items-center bg-white/5 border border-white/10 rounded-full px-3 md:px-4 py-2 focus-within:border-amber-500 transition-all w-32 sm:w-48 md:w-64">
-              <Search size={16} className="text-stone-400" />
+            <div
+              className={`flex items-center rounded-full transition-all duration-300 ${
+                isSearchOpen
+                  ? "w-40 px-3 py-2 bg-white/5 border border-white/10"
+                  : "w-10 h-10 justify-center bg-transparent border-transparent"
+              } md:w-64 md:px-4 md:py-2 md:bg-white/5 md:border md:border-white/10 md:justify-start`}
+            >
+              <button
+                onClick={() => {
+                  setIsSearchOpen(!isSearchOpen);
+                  if (!isSearchOpen) {
+                    setTimeout(() => searchInputRef.current?.focus(), 100);
+                  }
+                }}
+              >
+                <Search
+                  size={isSearchOpen ? 16 : 20}
+                  className="text-stone-400"
+                />
+              </button>
               <input
+                ref={searchInputRef}
                 type="text"
-                placeholder="Search by name or category..."
-                className="bg-transparent border-none outline-none text-xs ml-2 text-white placeholder-stone-500 w-full"
+                placeholder="Search..."
+                className={`bg-transparent border-none outline-none text-xs ml-2 text-white placeholder-stone-500 w-full ${
+                  isSearchOpen ? "block" : "hidden md:block"
+                }`}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
+                onBlur={() => !searchQuery && setIsSearchOpen(false)}
               />
             </div>
             <div
@@ -340,9 +361,9 @@ const Shop = ({
                     </div>
                   </div>
 
-                  <div className="flex flex-col md:flex-row justify-between items-center pt-2 gap-2 md:gap-0">
+                  <div className="flex flex-row justify-between items-center pt-2 gap-2">
                     <div className="flex flex-col items-start">
-                      <span className="text-lg md:text-2xl font-serif text-amber-500">
+                      <span className="text-sm md:text-2xl font-serif text-amber-500">
                         PKR {product.price}
                       </span>
                       <span className="text-xs text-stone-500 line-through">
@@ -352,7 +373,7 @@ const Shop = ({
                     {isInCart ? (
                       <button
                         onClick={() => removeFromCart(product.id)}
-                        className="w-full md:w-auto bg-red-500/10 hover:bg-red-500 hover:text-white text-red-500 px-3 py-1.5 md:px-4 md:py-2 rounded-full text-[8px] md:text-[10px] font-bold uppercase tracking-widest transition-all flex items-center justify-center gap-2 border border-red-500/20"
+                        className="bg-red-500/10 hover:bg-red-500 hover:text-white text-red-500 px-3 py-1.5 rounded-full text-[8px] md:text-[10px] font-bold uppercase tracking-widest transition-all flex items-center justify-center gap-2 border border-red-500/20"
                       >
                         <Trash2 size={12} className="md:w-3.5 md:h-3.5" />{" "}
                         Remove
@@ -360,7 +381,7 @@ const Shop = ({
                     ) : (
                       <button
                         onClick={() => handleAddToCart(product)}
-                        className="w-full md:w-auto bg-white/10 hover:bg-amber-500 hover:text-black text-white px-3 py-1.5 md:px-4 md:py-2 rounded-full text-[8px] md:text-[10px] font-bold uppercase tracking-widest transition-all flex items-center justify-center gap-2"
+                        className="bg-white/10 hover:bg-amber-500 hover:text-black text-white px-3 py-1.5 rounded-full text-[8px] md:text-[10px] font-bold uppercase tracking-widest transition-all flex items-center justify-center gap-2"
                       >
                         <ShoppingBag size={12} className="md:w-3.5 md:h-3.5" />{" "}
                         Add
@@ -501,9 +522,9 @@ const Shop = ({
       </div>
 
       {/* Footer */}
-      <footer className="py-24 bg-black border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20">
-          <div className="space-y-8">
+      <footer className="py-10 bg-black border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10">
+          <div className="space-y-6">
             <div className="flex items-center gap-2">
               <img
                 src={logo}
@@ -530,31 +551,31 @@ const Shop = ({
               ))}
             </div>
           </div>
-          <div className="space-y-8">
-            <div className="bg-stone-900/40 p-12 rounded-[48px] border border-white/5 relative overflow-hidden group">
+          <div className="space-y-6">
+            <div className="bg-stone-900/40 p-6 rounded-[24px] border border-white/5 relative overflow-hidden group">
               <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:rotate-12 transition-transform">
-                <ShoppingBag size={120} />
+                <ShoppingBag size={80} />
               </div>
-              <p className="text-[10px] font-bold tracking-[0.4em] uppercase text-amber-500 mb-4">
+              <p className="text-[10px] font-bold tracking-[0.4em] uppercase text-amber-500 mb-2">
                 Get Update
               </p>
-              <h3 className="text-3xl font-serif mb-8 leading-tight">
+              <h3 className="text-xl font-serif mb-4 leading-tight">
                 Subscribe For Latest Update
               </h3>
-              <div className="flex gap-2 relative z-10">
+              <div className="flex flex-col sm:flex-row gap-2 relative z-10">
                 <input
-                  className="flex-1 bg-black border border-white/10 rounded-full px-6 py-4 text-xs outline-none focus:border-amber-500 transition-colors"
+                  className="flex-1 bg-black border border-white/10 rounded-full px-4 py-3 text-xs outline-none focus:border-amber-500 transition-colors"
                   placeholder="Your email address"
                 />
-                <button className="bg-amber-500 text-black px-8 py-4 rounded-full text-[10px] font-black uppercase hover:bg-amber-400 transition-all tracking-widest">
+                <button className="bg-amber-500 text-black px-6 py-3 rounded-full text-[10px] font-black uppercase hover:bg-amber-400 transition-all tracking-widest whitespace-nowrap">
                   Subscribe
                 </button>
               </div>
             </div>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto px-6 pt-20 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-[0.3em] text-stone-600 border-t border-white/5 mt-20">
-          <div className="flex gap-10 mb-6 md:mb-0">
+        <div className="max-w-7xl mx-auto px-6 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-[0.3em] text-stone-600 border-t border-white/5 mt-8 text-center md:text-left">
+          <div className="flex flex-wrap justify-center gap-6 mb-4 md:mb-0">
             <a href="/" className="hover:text-amber-500">
               Privacy Policy
             </a>

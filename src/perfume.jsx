@@ -112,9 +112,9 @@ const Perfume = () => {
   const [timelineTitle, setTimelineTitle] = useState("");
 
   const heroFullText =
-    "Sculpting Dreams in a Bottle Elysian Scents' Art of Perfumery";
-  const signatureFullText = "Elevate Your Senses with Elysian Elegance";
-  const timelineFullText = "Journey of Elysian Elegance A Fragrance Timeline";
+    "Crafting Memories in Every Bottle | The Art of Gul Perfume";
+  const signatureFullText = "Experience the Essence of Gul Perfume";
+  const timelineFullText = "Our Journey of Scent | A Legacy of Excellence";
 
   useEffect(() => {
     const type = (text, setter, delay = 50) => {
@@ -238,7 +238,7 @@ Please confirm my order.`;
     {
       question: "Do you offer international shipping?",
       answer:
-        "Yes, we offer complimentary, fully-insured, express shipping worldwide on all orders. We believe the luxury experience should be seamless, from purchase to delivery.",
+        "We primarily offer express shipping nationwide across Pakistan. For international orders, please contact our support team to discuss availability.",
     },
     {
       question: "What is your return policy?",
@@ -326,9 +326,9 @@ Please confirm my order.`;
                 <span className="text-amber-500 animate-pulse">|</span>
               </h1>
               <p className="text-stone-400 text-sm md:text-lg max-w-lg leading-relaxed font-light">
-                Uncover the secrets of our timeless designs; where the exquisite
-                marriage of form and fragrance elevates each bottle into a work
-                of art.
+                Discover the essence of luxury at our exclusive outlet. Where
+                tradition meets modern elegance, elevating your presence with
+                every spray.
               </p>
             </div>
 
@@ -355,16 +355,16 @@ Please confirm my order.`;
                   ))}
                 </div>
                 <span className="text-[10px] font-bold tracking-tighter uppercase tracking-widest">
-                  100+ Experts For You
+                  Expert Fragrance Consultants
                 </span>
               </div>
             </div>
 
             <div className="flex gap-4 md:gap-8 pt-2 md:pt-4">
               {[
-                { label: "Trusted Clients", val: "100k+" },
-                { label: "Luxury Perfume", val: "80k+" },
-                { label: "Giving Best Service", val: "2y+" },
+                { label: "Happy Customers", val: "50k+" },
+                { label: "Bottles Sold", val: "20k+" },
+                { label: "Years of Excellence", val: "5+" },
               ].map((stat, i) => (
                 <div key={i} className="space-y-1">
                   <p className="text-xl md:text-2xl font-serif text-amber-500">
@@ -413,8 +413,8 @@ Please confirm my order.`;
             </div>
             <div className="flex-1 max-w-sm space-y-6">
               <p className="text-stone-500 text-sm font-light leading-relaxed">
-                Welcome to the epitome of olfactory luxury — the Elysian Scents
-                Signature Collection.
+                Step into a world of refined fragrances. Our Signature
+                Collection defines sophistication and lasting allure.
               </p>
               <button
                 className="flex items-center gap-3 text-amber-500 text-[10px] font-bold tracking-[0.3em] uppercase group"
@@ -600,8 +600,8 @@ Please confirm my order.`;
                 <span className="text-amber-500 animate-pulse">|</span>
               </h2>
               <p className="text-stone-500 text-sm md:text-lg font-light leading-relaxed">
-                Uncover the chapters of our olfactory legacy, each fragrance a
-                milestone in the pursuit of timeless elegance.
+                From humble beginnings to a renowned perfume outlet, explore how
+                Gul Perfume became a symbol of quality and trust.
               </p>
             </div>
             <div className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-12">
@@ -645,12 +645,12 @@ Please confirm my order.`;
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 md:mb-24 gap-6 md:gap-8">
             <h2 className="text-3xl md:text-5xl font-serif">
-              Tradition, Innovation Unite <br /> in Craftsmanship.
+              Tradition & Modernity <br /> Blended to Perfection.
             </h2>
             <div className="max-w-xs space-y-4">
               <p className="text-[10px] md:text-xs text-stone-500 leading-relaxed uppercase tracking-widest">
-                Unveiling the Artistry Behind Timeless Creations, Where
-                Tradition Meets Innovation.
+                Unveiling the Artistry Behind Our Scents, Where Heritage Meets
+                Contemporary Style.
               </p>
               <button
                 className="flex items-center gap-2 text-amber-500 text-[10px] font-bold tracking-widest group"
@@ -670,33 +670,33 @@ Please confirm my order.`;
               <div className="text-left lg:text-right group cursor-default relative pl-8 lg:pl-0 lg:pr-12">
                 <div className="absolute top-2 left-0 lg:left-auto lg:right-0 w-2.5 h-2.5 rounded-full bg-amber-500 shadow-[0_0_15px_#f59e0b]"></div>
                 <h4 className="text-amber-500 font-serif text-xl md:text-2xl mb-2 md:mb-3">
-                  Exclusivity Redefined
+                  Unmatched Exclusivity
                 </h4>
                 <p className="text-stone-500 text-[10px] md:text-xs leading-relaxed max-w-none lg:max-w-[260px] ml-0 lg:ml-auto">
-                  From the initial conception to the final presentation, Clive
-                  Christian No. 1 Imperial Majesty redefines exclusivity.
+                  From the first note to the lasting trail, Gul Perfume
+                  redefines what it means to wear true luxury.
                 </p>
               </div>
 
               <div className="text-left lg:text-right group cursor-default relative pl-8 lg:pl-0 lg:pr-12">
                 <div className="absolute top-2 left-0 lg:left-auto lg:right-0 w-2.5 h-2.5 rounded-full bg-amber-500 shadow-[0_0_15px_#f59e0b]"></div>
                 <h4 className="text-amber-500 font-serif text-xl md:text-2xl mb-2 md:mb-3">
-                  Limited Edition Luxury
+                  Curated for You
                 </h4>
                 <p className="text-stone-500 text-[10px] md:text-xs leading-relaxed max-w-none lg:max-w-[260px] ml-0 lg:ml-auto">
-                  The fragrance unfolds like a symphony on the skin, with top
-                  notes dancing in harmony with heart notes.
+                  Our scents unfold like a symphony, with top notes dancing in
+                  harmony with heart notes to create a lasting impression.
                 </p>
               </div>
 
               <div className="text-left lg:text-right group cursor-default relative pl-8 lg:pl-0 lg:pr-12">
                 <div className="absolute top-2 left-0 lg:left-auto lg:right-0 w-2.5 h-2.5 rounded-full bg-amber-500 shadow-[0_0_15px_#f59e0b]"></div>
                 <h4 className="text-amber-500 font-serif text-xl md:text-2xl mb-2 md:mb-3">
-                  Time-Honored
+                  Timeless Traditions
                 </h4>
                 <p className="text-stone-500 text-[10px] md:text-xs leading-relaxed max-w-none lg:max-w-[260px] ml-0 lg:ml-auto">
-                  Exclusivity is the hallmark of Clive Christian No. 1 Imperial
-                  Majesty and Limited in production.
+                  Quality is the hallmark of Gul Perfume. Produced in limited
+                  batches to ensure the highest standard of excellence.
                 </p>
               </div>
             </div>
@@ -734,33 +734,33 @@ Please confirm my order.`;
               <div className="text-left group cursor-default relative pl-8 lg:pl-12">
                 <div className="absolute top-2 left-0 w-2.5 h-2.5 rounded-full bg-amber-500 shadow-[0_0_15px_#f59e0b]"></div>
                 <h4 className="text-amber-500 font-serif text-xl md:text-2xl mb-2 md:mb-3">
-                  Artisanal Elegance
+                  Masterful Blending
                 </h4>
                 <p className="text-stone-500 text-[10px] md:text-xs leading-relaxed max-w-none lg:max-w-[260px]">
-                  The creation of Clive Christian No. 1 Imperial Majesty
-                  transcends the ordinary, embodying artisanal elegance.
+                  The creation of every Gul Perfume bottle transcends the
+                  ordinary, embodying the passion of our master perfumers.
                 </p>
               </div>
 
               <div className="text-left group cursor-default relative pl-8 lg:pl-12">
                 <div className="absolute top-2 left-0 w-2.5 h-2.5 rounded-full bg-amber-500 shadow-[0_0_15px_#f59e0b]"></div>
                 <h4 className="text-amber-500 font-serif text-xl md:text-2xl mb-2 md:mb-3">
-                  Rare and Exquisite
+                  Premium Ingredients
                 </h4>
                 <p className="text-stone-500 text-[10px] md:text-xs leading-relaxed max-w-none lg:max-w-[260px]">
-                  Craftsmanship meets rarity in the formulation. Majesty is
-                  infused with world's most exclusive ingredients.
+                  We source the finest ingredients to ensure every drop of Gul
+                  Perfume offers a rich and exquisite experience.
                 </p>
               </div>
 
               <div className="text-left group cursor-default relative pl-8 lg:pl-12">
                 <div className="absolute top-2 left-0 w-2.5 h-2.5 rounded-full bg-amber-500 shadow-[0_0_15px_#f59e0b]"></div>
                 <h4 className="text-amber-500 font-serif text-xl md:text-2xl mb-2 md:mb-3">
-                  Time-Honored
+                  Lasting Impressions
                 </h4>
                 <p className="text-stone-500 text-[10px] md:text-xs leading-relaxed max-w-none lg:max-w-[260px]">
-                  The creation process involves time-honored techniques passed
-                  down through generations.
+                  Our formulations are designed to linger, leaving a memorable
+                  trail that defines your presence.
                 </p>
               </div>
             </div>
@@ -921,13 +921,13 @@ Please confirm my order.`;
               {
                 name: "Ahmed Ali",
                 role: "Perfume Enthusiast",
-                text: "Packaging is top-notch luxury. The scent profile of 'Imperial Majesty' is unlike anything else.",
+                text: "Packaging is top-notch luxury. The scent profile of 'Sultanat' is unlike anything else.",
                 rating: 5,
               },
               {
                 name: "Zainab R.",
                 role: "Verified Buyer",
-                text: "Fast delivery and excellent customer service. The 'Enchanting Ember' is my new signature scent.",
+                text: "Fast delivery and excellent customer service. The 'Dreamscent' is my new signature scent.",
                 rating: 5,
               },
             ].map((review, index) => (
@@ -992,7 +992,7 @@ Please confirm my order.`;
               <div className="w-16 h-16 md:w-20 md:h-20 mx-auto bg-stone-900 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 border border-white/5 group-hover:border-amber-500/30">
                 <Coins className="w-6 h-6 md:w-8 md:h-8 text-stone-400 group-hover:text-amber-500 transition-colors" />
               </div>
-              <h3 className="text-lg md:text-xl font-serif text-white mb-3">Payment on Delivery</h3>
+              <h3 className="text-lg md:text-xl font-serif text-white mb-3">Cash on Delivery</h3>
               <p className="text-stone-400 text-xs md:text-sm leading-relaxed">
                 Experience seamless shopping. Pay with ease and confidence upon delivery, ensuring your complete satisfaction.
               </p>
@@ -1184,14 +1184,14 @@ Please confirm my order.`;
             </div>
           </div>
           <div className="space-y-8">
-            <div className="bg-stone-900/40 p-6 md:p-12 rounded-[24px] md:rounded-[48px] border border-white/5 relative overflow-hidden group">
+            <div className="bg-stone-900/40 p-4 md:p-12 rounded-[24px] md:rounded-[48px] border border-white/5 relative overflow-hidden group">
               <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:rotate-12 transition-transform">
                 <ShoppingBag className="w-20 h-20 md:w-[120px] md:h-[120px]" />
               </div>
               <p className="text-[8px] md:text-[10px] font-bold tracking-[0.4em] uppercase text-amber-500 mb-2 md:mb-4">
                 Get Update
               </p>
-              <h3 className="text-2xl md:text-3xl font-serif mb-6 md:mb-8 leading-tight">
+              <h3 className="text-xl md:text-3xl font-serif mb-4 md:mb-8 leading-tight">
                 Subscribe For Latest Update
               </h3>
               <div className="flex flex-col md:flex-row gap-2 relative z-10">
@@ -1222,6 +1222,18 @@ Please confirm my order.`;
         </div>
       </footer>
 
+      {/* WhatsApp Direct Contact Button */}
+      <a
+        href="https://wa.me/923299509072"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed right-24 bottom-6 z-50 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center text-white shadow-[0_0_20px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform"
+      >
+        <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.536 0 1.52 1.115 2.988 1.264 3.186.149.198 2.19 3.361 5.27 4.693 2.151.928 2.985.94 4.1.88.84-.046 1.758-.718 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+        </svg>
+      </a>
+
       {/* Social Media Floating Action Button */}
       <div className="fixed right-6 bottom-6 z-50 flex flex-col items-end gap-4">
         <div
@@ -1233,7 +1245,9 @@ Please confirm my order.`;
             rel="noopener noreferrer"
             className="w-12 h-12 bg-[#25D366] rounded-full flex items-center justify-center text-white shadow-lg hover:scale-110 transition-transform"
           >
-            <MessageCircle size={24} />
+            <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.536 0 1.52 1.115 2.988 1.264 3.186.149.198 2.19 3.361 5.27 4.693 2.151.928 2.985.94 4.1.88.84-.046 1.758-.718 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+            </svg>
           </a>
           <a
             href="https://www.facebook.com/share/17Fvi8s93C/?mibextid=wwXIfr"

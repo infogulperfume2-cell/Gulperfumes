@@ -404,9 +404,9 @@ const Checkout = ({ cart = [], removeFromCart, clearCart }) => {
       </div>
 
       {/* Footer */}
-      <footer className="py-24 bg-black border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20">
-          <div className="space-y-8">
+      <footer className="py-10 bg-black border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10">
+          <div className="space-y-6">
             <div className="flex items-center gap-2">
               <img
                 src={logo}
@@ -433,31 +433,31 @@ const Checkout = ({ cart = [], removeFromCart, clearCart }) => {
               ))}
             </div>
           </div>
-          <div className="space-y-8">
-            <div className="bg-stone-900/40 p-12 rounded-[48px] border border-white/5 relative overflow-hidden group">
+          <div className="space-y-6">
+            <div className="bg-stone-900/40 p-6 rounded-[24px] border border-white/5 relative overflow-hidden group">
               <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:rotate-12 transition-transform">
-                <ShoppingBag size={120} />
+                <ShoppingBag size={80} />
               </div>
-              <p className="text-[10px] font-bold tracking-[0.4em] uppercase text-amber-500 mb-4">
+              <p className="text-[10px] font-bold tracking-[0.4em] uppercase text-amber-500 mb-2">
                 Get Update
               </p>
-              <h3 className="text-3xl font-serif mb-8 leading-tight">
+              <h3 className="text-xl font-serif mb-4 leading-tight">
                 Subscribe For Latest Update
               </h3>
-              <div className="flex gap-2 relative z-10">
+              <div className="flex flex-col sm:flex-row gap-2 relative z-10">
                 <input
-                  className="flex-1 bg-black border border-white/10 rounded-full px-6 py-4 text-xs outline-none focus:border-amber-500 transition-colors"
+                  className="flex-1 bg-black border border-white/10 rounded-full px-4 py-3 text-xs outline-none focus:border-amber-500 transition-colors"
                   placeholder="Your email address"
                 />
-                <button className="bg-amber-500 text-black px-8 py-4 rounded-full text-[10px] font-black uppercase hover:bg-amber-400 transition-all tracking-widest">
+                <button className="bg-amber-500 text-black px-6 py-3 rounded-full text-[10px] font-black uppercase hover:bg-amber-400 transition-all tracking-widest whitespace-nowrap">
                   Subscribe
                 </button>
               </div>
             </div>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto px-6 pt-20 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-[0.3em] text-stone-600 border-t border-white/5 mt-20">
-          <div className="flex gap-10 mb-6 md:mb-0">
+        <div className="max-w-7xl mx-auto px-6 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-[0.3em] text-stone-600 border-t border-white/5 mt-8 text-center md:text-left">
+          <div className="flex flex-wrap justify-center gap-6 mb-4 md:mb-0">
             <a href="/" className="hover:text-amber-500">
               Privacy Policy
             </a>
