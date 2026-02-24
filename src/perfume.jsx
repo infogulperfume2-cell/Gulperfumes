@@ -63,6 +63,7 @@ const Perfume = () => {
     subject: "",
     message: "",
   });
+  const [showFreeDelivery, setShowFreeDelivery] = useState(true);
 
   const handleContactChange = (e) => {
     setContactForm({ ...contactForm, [e.target.name]: e.target.value });
@@ -792,7 +793,9 @@ Please confirm my order.`;
                   <div className="inline-block px-3 py-1 md:px-4 md:py-1.5 rounded-full bg-amber-500/20 backdrop-blur-md border border-amber-500/30 text-amber-500 text-[8px] md:text-[10px] font-bold tracking-[0.2em] uppercase mb-2 md:mb-3">
                     Moment of Pride
                   </div>
-                  <h3 className="text-xl md:text-3xl font-serif text-white">Dr. Danish Younas</h3>
+                  <h3 className="text-xl md:text-3xl font-serif text-white">
+                    Dr. Danish Younas
+                  </h3>
                 </div>
               </div>
             </div>
@@ -808,19 +811,29 @@ Please confirm my order.`;
                 </h2>
                 <div className="w-16 h-1 bg-amber-500 mx-auto md:mx-0 rounded-full"></div>
               </div>
-              
+
               <p className="text-stone-400 text-xs md:text-base leading-relaxed font-light">
-                A testament to excellence and dedication. We are proud to announce that <strong className="text-white">Dr. Danish Younas</strong> was recognized for his outstanding contribution to the art of perfumery. This prestigious award symbolizes the passion, craftsmanship, and heritage poured into every bottle of Gul Perfume.
+                A testament to excellence and dedication. We are proud to
+                announce that{" "}
+                <strong className="text-white">Dr. Danish Younas</strong> was
+                recognized for his outstanding contribution to the art of
+                perfumery. This prestigious award symbolizes the passion,
+                craftsmanship, and heritage poured into every bottle of Gul
+                Perfume.
               </p>
 
               <div className="flex flex-col md:flex-row items-center gap-6 pt-2">
                 <div className="flex items-center gap-4 bg-white/5 p-4 rounded-2xl border border-white/5 hover:border-amber-500/30 transition-colors">
                   <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-amber-500/10 flex items-center justify-center">
-                    <Award className="text-amber-500 w-5 h-5 md:w-6 md:h-6" /> 
+                    <Award className="text-amber-500 w-5 h-5 md:w-6 md:h-6" />
                   </div>
                   <div className="text-left">
-                    <p className="text-white font-serif text-base md:text-lg">Excellence Award</p>
-                    <p className="text-stone-500 text-[10px] uppercase tracking-wider">Governor House Peshawar</p>
+                    <p className="text-white font-serif text-base md:text-lg">
+                      Excellence Award
+                    </p>
+                    <p className="text-stone-500 text-[10px] uppercase tracking-wider">
+                      Governor House Peshawar
+                    </p>
                   </div>
                 </div>
               </div>
@@ -873,7 +886,12 @@ Please confirm my order.`;
               </div>
 
               <p className="text-stone-400 text-xs md:text-base leading-relaxed font-light">
-                Sharing the essence of luxury. <strong className="text-white">Farooq Khan</strong> presented the exquisite Gul Perfume to the Governor, marking a moment of appreciation for fine craftsmanship. This gesture highlights the prestige and timeless appeal of our signature scents, chosen for dignitaries and connoisseurs alike.
+                Sharing the essence of luxury.{" "}
+                <strong className="text-white">Farooq Khan</strong> presented
+                the exquisite Gul Perfume to the Governor, marking a moment of
+                appreciation for fine craftsmanship. This gesture highlights the
+                prestige and timeless appeal of our signature scents, chosen for
+                dignitaries and connoisseurs alike.
               </p>
 
               <div className="flex flex-col md:flex-row items-center gap-6 pt-2">
@@ -882,8 +900,12 @@ Please confirm my order.`;
                     <Gift className="text-amber-500 w-5 h-5 md:w-6 md:h-6" />
                   </div>
                   <div className="text-left">
-                    <p className="text-white font-serif text-base md:text-lg">Royal Gesture</p>
-                    <p className="text-stone-500 text-[10px] uppercase tracking-wider">Symbol of Respect</p>
+                    <p className="text-white font-serif text-base md:text-lg">
+                      Royal Gesture
+                    </p>
+                    <p className="text-stone-500 text-[10px] uppercase tracking-wider">
+                      Symbol of Respect
+                    </p>
                   </div>
                 </div>
               </div>
@@ -970,9 +992,12 @@ Please confirm my order.`;
               <div className="w-16 h-16 md:w-20 md:h-20 mx-auto bg-stone-900 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 border border-white/5 group-hover:border-amber-500/30">
                 <Truck className="w-6 h-6 md:w-8 md:h-8 text-stone-400 group-hover:text-amber-500 transition-colors" />
               </div>
-              <h3 className="text-lg md:text-xl font-serif text-white mb-3">Fast Delivery</h3>
+              <h3 className="text-lg md:text-xl font-serif text-white mb-3">
+                Fast Delivery
+              </h3>
               <p className="text-stone-500 text-xs md:text-sm leading-relaxed">
-                Your time is precious. We ensure your Gul Perfume reaches you swiftly and safely, anywhere in the country.
+                Your time is precious. We ensure your Gul Perfume reaches you
+                swiftly and safely, anywhere in the country.
               </p>
             </div>
 
@@ -981,9 +1006,12 @@ Please confirm my order.`;
               <div className="w-16 h-16 md:w-20 md:h-20 mx-auto bg-stone-900 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 border border-white/5 group-hover:border-amber-500/30">
                 <ShieldCheck className="w-6 h-6 md:w-8 md:h-8 text-stone-400 group-hover:text-amber-500 transition-colors" />
               </div>
-              <h3 className="text-lg md:text-xl font-serif text-white mb-3">Free Shipping</h3>
+              <h3 className="text-lg md:text-xl font-serif text-white mb-3">
+                Free Shipping
+              </h3>
               <p className="text-stone-400 text-xs md:text-sm leading-relaxed">
-                Indulge without limits. We offer free shipping on all orders, bringing the essence of luxury directly to your door.
+                Indulge without limits. We offer free shipping on all orders,
+                bringing the essence of luxury directly to your door.
               </p>
             </div>
 
@@ -992,9 +1020,12 @@ Please confirm my order.`;
               <div className="w-16 h-16 md:w-20 md:h-20 mx-auto bg-stone-900 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 border border-white/5 group-hover:border-amber-500/30">
                 <Coins className="w-6 h-6 md:w-8 md:h-8 text-stone-400 group-hover:text-amber-500 transition-colors" />
               </div>
-              <h3 className="text-lg md:text-xl font-serif text-white mb-3">Cash on Delivery</h3>
+              <h3 className="text-lg md:text-xl font-serif text-white mb-3">
+                Cash on Delivery
+              </h3>
               <p className="text-stone-400 text-xs md:text-sm leading-relaxed">
-                Experience seamless shopping. Pay with ease and confidence upon delivery, ensuring your complete satisfaction.
+                Experience seamless shopping. Pay with ease and confidence upon
+                delivery, ensuring your complete satisfaction.
               </p>
             </div>
           </div>
@@ -1059,7 +1090,10 @@ Please confirm my order.`;
       </section>
 
       {/* CONTACT SECTION */}
-      <section className="py-16 md:py-24 relative border-t border-white/5" id="contact">
+      <section
+        className="py-16 md:py-24 relative border-t border-white/5"
+        id="contact"
+      >
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Contact Info */}
@@ -1075,17 +1109,23 @@ Please confirm my order.`;
                   </span>
                 </h2>
                 <p className="text-stone-400 text-sm leading-relaxed max-w-md font-light">
-                  Have questions about our collections or need a personalized recommendation? Our fragrance experts are here to assist you.
+                  Have questions about our collections or need a personalized
+                  recommendation? Our fragrance experts are here to assist you.
                 </p>
               </div>
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4 group">
                   <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-amber-500/50 transition-colors">
-                    <MapPin className="text-stone-400 group-hover:text-amber-500 transition-colors" size={20} />
+                    <MapPin
+                      className="text-stone-400 group-hover:text-amber-500 transition-colors"
+                      size={20}
+                    />
                   </div>
                   <div>
-                    <h4 className="text-white font-serif text-lg mb-1">Visit Our Boutique</h4>
+                    <h4 className="text-white font-serif text-lg mb-1">
+                      Visit Our Boutique
+                    </h4>
                     <a
                       href="https://www.google.com/maps/search/?api=1&query=Dalazak+Road+near+Tory+kabab+house+Peshawar"
                       target="_blank"
@@ -1099,21 +1139,35 @@ Please confirm my order.`;
 
                 <div className="flex items-start gap-4 group">
                   <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-amber-500/50 transition-colors">
-                    <Mail className="text-stone-400 group-hover:text-amber-500 transition-colors" size={20} />
+                    <Mail
+                      className="text-stone-400 group-hover:text-amber-500 transition-colors"
+                      size={20}
+                    />
                   </div>
                   <div>
-                    <h4 className="text-white font-serif text-lg mb-1">Email Us</h4>
-                    <p className="text-stone-500 text-sm font-light">info.gulperfume2@gmail.com</p>
+                    <h4 className="text-white font-serif text-lg mb-1">
+                      Email Us
+                    </h4>
+                    <p className="text-stone-500 text-sm font-light">
+                      info.gulperfume2@gmail.com
+                    </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4 group">
                   <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-amber-500/50 transition-colors">
-                    <Phone className="text-stone-400 group-hover:text-amber-500 transition-colors" size={20} />
+                    <Phone
+                      className="text-stone-400 group-hover:text-amber-500 transition-colors"
+                      size={20}
+                    />
                   </div>
                   <div>
-                    <h4 className="text-white font-serif text-lg mb-1">Call Us</h4>
-                    <p className="text-stone-500 text-sm font-light">+92 329 9509072</p>
+                    <h4 className="text-white font-serif text-lg mb-1">
+                      Call Us
+                    </h4>
+                    <p className="text-stone-500 text-sm font-light">
+                      +92 329 9509072
+                    </p>
                   </div>
                 </div>
               </div>
@@ -1124,25 +1178,68 @@ Please confirm my order.`;
               <form className="space-y-6" onSubmit={handleContactSubmit}>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label className="text-[10px] uppercase tracking-widest text-stone-500 font-bold">Name</label>
-                    <input type="text" name="name" value={contactForm.name} onChange={handleContactChange} className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:border-amber-500 focus:outline-none transition-colors placeholder-stone-700" placeholder="Your name" required />
+                    <label className="text-[10px] uppercase tracking-widest text-stone-500 font-bold">
+                      Name
+                    </label>
+                    <input
+                      type="text"
+                      name="name"
+                      value={contactForm.name}
+                      onChange={handleContactChange}
+                      className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:border-amber-500 focus:outline-none transition-colors placeholder-stone-700"
+                      placeholder="Your name"
+                      required
+                    />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-[10px] uppercase tracking-widest text-stone-500 font-bold">Email</label>
-                    <input type="email" name="email" value={contactForm.email} onChange={handleContactChange} className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:border-amber-500 focus:outline-none transition-colors placeholder-stone-700" placeholder="Your email" required />
+                    <label className="text-[10px] uppercase tracking-widest text-stone-500 font-bold">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={contactForm.email}
+                      onChange={handleContactChange}
+                      className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:border-amber-500 focus:outline-none transition-colors placeholder-stone-700"
+                      placeholder="Your email"
+                      required
+                    />
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <label className="text-[10px] uppercase tracking-widest text-stone-500 font-bold">Subject</label>
-                  <input type="text" name="subject" value={contactForm.subject} onChange={handleContactChange} className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:border-amber-500 focus:outline-none transition-colors placeholder-stone-700" placeholder="How can we help?" required />
+                  <label className="text-[10px] uppercase tracking-widest text-stone-500 font-bold">
+                    Subject
+                  </label>
+                  <input
+                    type="text"
+                    name="subject"
+                    value={contactForm.subject}
+                    onChange={handleContactChange}
+                    className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:border-amber-500 focus:outline-none transition-colors placeholder-stone-700"
+                    placeholder="How can we help?"
+                    required
+                  />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-[10px] uppercase tracking-widest text-stone-500 font-bold">Message</label>
-                  <textarea rows="4" name="message" value={contactForm.message} onChange={handleContactChange} className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:border-amber-500 focus:outline-none transition-colors resize-none placeholder-stone-700" placeholder="Write your message here..." required></textarea>
+                  <label className="text-[10px] uppercase tracking-widest text-stone-500 font-bold">
+                    Message
+                  </label>
+                  <textarea
+                    rows="4"
+                    name="message"
+                    value={contactForm.message}
+                    onChange={handleContactChange}
+                    className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:border-amber-500 focus:outline-none transition-colors resize-none placeholder-stone-700"
+                    placeholder="Write your message here..."
+                    required
+                  ></textarea>
                 </div>
                 <button className="w-full bg-amber-500 text-black py-4 rounded-xl font-bold uppercase tracking-widest hover:bg-amber-400 transition-all flex items-center justify-center gap-2 group">
                   Send Message
-                  <Send size={16} className="group-hover:translate-x-1 transition-transform" />
+                  <Send
+                    size={16}
+                    className="group-hover:translate-x-1 transition-transform"
+                  />
                 </button>
               </form>
             </div>
@@ -1222,17 +1319,40 @@ Please confirm my order.`;
         </div>
       </footer>
 
-      {/* WhatsApp Direct Contact Button */}
-      <a
-        href="https://wa.me/923299509072"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed right-24 bottom-6 z-50 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center text-white shadow-[0_0_20px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform"
-      >
-        <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.536 0 1.52 1.115 2.988 1.264 3.186.149.198 2.19 3.361 5.27 4.693 2.151.928 2.985.94 4.1.88.84-.046 1.758-.718 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
-        </svg>
-      </a>
+      {/* Free Delivery Floating Label */}
+      {showFreeDelivery && (
+        <div
+          className="fixed left-4 bottom-4 md:left-8 md:bottom-8 z-40 animate-in"
+          style={{
+            animationDelay: "1s",
+            opacity: 0,
+            animationFillMode: "forwards",
+          }}
+        >
+          <div className="relative group cursor-default">
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-amber-500 to-orange-600 rounded-full blur opacity-30 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+            <div className="relative pl-4 pr-10 py-2 md:pl-6 md:pr-12 md:py-3 bg-[#0a0a0a] border border-white/10 rounded-full flex items-center gap-3 md:gap-4 shadow-2xl">
+              <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-amber-500/10 flex items-center justify-center text-amber-500 shrink-0">
+                <Truck size={16} className="md:w-5 md:h-5" />
+              </div>
+              <div>
+                <p className="text-[8px] md:text-[10px] text-stone-400 uppercase tracking-widest font-bold">
+                  Special Offer
+                </p>
+                <p className="text-white font-serif text-xs md:text-sm whitespace-nowrap">
+                  Free Home Delivery
+                </p>
+              </div>
+              <button
+                onClick={() => setShowFreeDelivery(false)}
+                className="absolute right-2 top-1/2 -translate-y-1/2 p-1 text-stone-500 hover:text-white transition-colors rounded-full hover:bg-white/10"
+              >
+                <X size={14} />
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Social Media Floating Action Button */}
       <div className="fixed right-6 bottom-6 z-50 flex flex-col items-end gap-4">
@@ -1273,6 +1393,23 @@ Please confirm my order.`;
           >
             <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
               <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
+            </svg>
+          </a>
+        </div>
+        {/* WhatsApp Direct Contact Button */}
+        <div className="relative group">
+          <span className="absolute right-full mr-4 top-1/2 -translate-y-1/2 bg-white text-black text-xs font-bold px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-lg pointer-events-none">
+            Chat with us
+            <span className="absolute top-1/2 -right-1 -translate-y-1/2 border-4 border-transparent border-l-white"></span>
+          </span>
+          <a
+            href="https://wa.me/923299509072"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center text-white shadow-[0_0_20px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.536 0 1.52 1.115 2.988 1.264 3.186.149.198 2.19 3.361 5.27 4.693 2.151.928 2.985.94 4.1.88.84-.046 1.758-.718 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
             </svg>
           </a>
         </div>
