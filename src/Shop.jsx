@@ -13,7 +13,10 @@ import {
 } from "lucide-react";
 import logo from "./perfume.png";
 import { useNavigate } from "react-router-dom";
+<<<<<<< HEAD
 import { products as productData, pourHomme, pourFemme } from "./data/products";
+=======
+>>>>>>> 85b5763689d63fec51ecae680901f8e872446b70
 
 // Load all images from assets folder
 const localImages = import.meta.glob("./assets/*.{png,jpg,jpeg,webp}", {
@@ -60,9 +63,52 @@ const Shop = ({ cart, addToCart, updateQuantity, removeFromCart }) => {
     setVisibleCount(8);
   }, [searchQuery, selectedCategory, sortOrder]);
 
+<<<<<<< HEAD
   const products = useMemo(() => {
     // Generating Product Objects from centralized data
     return productData.map((item, index) => {
+=======
+  const pourHomme = [
+    "Sultanat",
+    "Officer",
+    "Shehensha",
+    "Markhor",
+    "Bluish Vally",
+    "Fantasticdream",
+    "just impress",
+    "Daimond",
+    "Black code",
+    "Elegant man",
+  ];
+
+  const pourFemme = ["Sukoon", "Lilly Gold(s)", "moonwalk(w)"];
+
+  const products = useMemo(() => {
+    // Perfume Data List
+    const productList = [
+      { name: "Shehensha", price: 3000 },
+      { name: "Fantasticdream", price: 3200 },
+      { name: "Sultanat", price: 2900 },
+      { name: "Dreamscent", price: 3500 },
+      { name: "Sukoon", price: 2900 },
+      { name: "Lilly Gold(s)", price: 2800 },
+      { name: "Daimond", price: 3700 },
+      { name: "Officer", price: 3200 },
+      { name: "Black code", price: 3000 },
+      { name: "Markhor", price: 2800 },
+      { name: "Sta zargy", price: 3000 },
+      { name: "moonwalk(w)", price: 2800 },
+      { name: "Crown", price: 3000 },
+      { name: "just impress", price: 2600 },
+      { name: "Legend Person", price: 4000 },
+      { name: "Wanted signature", price: 2700 },
+      { name: "Bluish Vally", price: 2400 },
+      { name: "Elegant man", price: 2650 },
+    ];
+
+    // Generating Product Objects
+    return productList.map((item, index) => {
+>>>>>>> 85b5763689d63fec51ecae680901f8e872446b70
       // Try to find local image matching the name
       let imageSrc = getImage(item.name);
 
@@ -105,8 +151,13 @@ const Shop = ({ cart, addToCart, updateQuantity, removeFromCart }) => {
         id: index + 1,
         name: item.name,
         price: item.price,
+<<<<<<< HEAD
         oldPrice: item.price,
         discount: item.discount,
+=======
+        oldPrice: item.price + 1000,
+        category: ["Pour Homme", "Pour Femme", "Unisex"][index % 3],
+>>>>>>> 85b5763689d63fec51ecae680901f8e872446b70
         category: category,
         image: imageSrc,
         rating: (4 + Math.random()).toFixed(1),
@@ -295,8 +346,12 @@ const Shop = ({ cart, addToCart, updateQuantity, removeFromCart }) => {
             return (
               <div
                 key={product.id}
+<<<<<<< HEAD
                 onClick={() => navigate(`/product/${product.id}`)}
                 className="group relative cursor-pointer bg-white/[0.03] backdrop-blur-xl border border-white/5 rounded-[20px] md:rounded-[32px] overflow-hidden hover:bg-white/[0.05] hover:border-amber-500/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_80px_rgba(245,158,11,0.18)]"
+=======
+                className="group relative bg-white/[0.03] backdrop-blur-xl border border-white/5 rounded-[20px] md:rounded-[32px] overflow-hidden hover:bg-white/[0.05] hover:border-amber-500/40 transition-all duration-500 hover:-translate-y-2 shadow-xl"
+>>>>>>> 85b5763689d63fec51ecae680901f8e872446b70
               >
                 {/* Image */}
                 <div className="h-[160px] md:h-[280px] overflow-hidden relative">
@@ -337,10 +392,14 @@ const Shop = ({ cart, addToCart, updateQuantity, removeFromCart }) => {
                     </div>
                     {isInCart ? (
                       <button
+<<<<<<< HEAD
                         onClick={(e) => {
                           e.stopPropagation();
                           removeFromCart(product.id);
                         }}
+=======
+                        onClick={() => removeFromCart(product.id)}
+>>>>>>> 85b5763689d63fec51ecae680901f8e872446b70
                         className="bg-red-500/10 hover:bg-red-500 hover:text-white text-red-500 px-3 py-1.5 rounded-full text-[8px] md:text-[10px] font-bold uppercase tracking-widest transition-all flex items-center justify-center gap-2 border border-red-500/20"
                       >
                         <Trash2 size={12} className="md:w-3.5 md:h-3.5" />{" "}
@@ -348,10 +407,14 @@ const Shop = ({ cart, addToCart, updateQuantity, removeFromCart }) => {
                       </button>
                     ) : (
                       <button
+<<<<<<< HEAD
                         onClick={(e) => {
                           e.stopPropagation();
                           handleAddToCart(product);
                         }}
+=======
+                        onClick={() => handleAddToCart(product)}
+>>>>>>> 85b5763689d63fec51ecae680901f8e872446b70
                         className="bg-white/10 hover:bg-amber-500 hover:text-black text-white px-3 py-1.5 rounded-full text-[8px] md:text-[10px] font-bold uppercase tracking-widest transition-all flex items-center justify-center gap-2"
                       >
                         <ShoppingBag size={12} className="md:w-3.5 md:h-3.5" />{" "}
