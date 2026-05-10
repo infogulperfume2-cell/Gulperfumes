@@ -1,20 +1,12 @@
 import React, { useState, useEffect } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { Loader2 } from "lucide-react";
 import "./index.css";
 import Perfume from "./perfume";
 import Shop from "./Shop";
 import Checkout from "./Checkout";
-<<<<<<< HEAD
 import ProductDetails from "./ProductDetails";
 import { products } from "./data/products";
-=======
->>>>>>> 85b5763689d63fec51ecae680901f8e872446b70
 
 const AnalyticsWrapper = () => {
   const location = useLocation();
@@ -53,15 +45,11 @@ function App() {
     return savedCart ? JSON.parse(savedCart) : [];
   });
 
-<<<<<<< HEAD
-  // Update cart items with new prices for specific products
   useEffect(() => {
     setCart((currentCart) => {
       return currentCart.map((item) => {
-        // Find the product in our centralized data
         const updatedProduct = products.find((p) => p.name === item.name);
         if (updatedProduct && item.price !== updatedProduct.price) {
-          // Update price and oldPrice for the cart item
           return {
             ...item,
             price: updatedProduct.price,
@@ -73,8 +61,6 @@ function App() {
     });
   }, []);
 
-=======
->>>>>>> 85b5763689d63fec51ecae680901f8e872446b70
   useEffect(() => {
     const fadeTimer = setTimeout(() => setIsFading(true), 2000);
     const removeTimer = setTimeout(() => setLoading(false), 2500);
@@ -143,7 +129,6 @@ function App() {
           </div>
         )}
         <Routes>
-<<<<<<< HEAD
           <Route
             path="/"
             element={
@@ -155,9 +140,6 @@ function App() {
               />
             }
           />
-=======
-          <Route path="/" element={<Perfume />} />
->>>>>>> 85b5763689d63fec51ecae680901f8e872446b70
           <Route
             path="/shop"
             element={
@@ -170,7 +152,6 @@ function App() {
             }
           />
           <Route
-<<<<<<< HEAD
             path="/product/:id"
             element={
               <ProductDetails
@@ -182,8 +163,6 @@ function App() {
             }
           />
           <Route
-=======
->>>>>>> 85b5763689d63fec51ecae680901f8e872446b70
             path="/checkout"
             element={
               <Checkout

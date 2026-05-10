@@ -24,7 +24,6 @@ import {
   Mail,
   Phone,
   MapPin,
-<<<<<<< HEAD
   Trash2,
   Plus,
   Minus,
@@ -32,11 +31,6 @@ import {
 import logo from "./perfume.png";
 import { useNavigate } from "react-router-dom";
 import { signatureProducts } from "./data/products";
-=======
-} from "lucide-react";
-import logo from "./perfume.png";
-import { useNavigate } from "react-router-dom";
->>>>>>> 85b5763689d63fec51ecae680901f8e872446b70
 
 // Load all images from assets folder
 const localImages = import.meta.glob("./assets/*.{png,jpg,jpeg,webp}", {
@@ -59,11 +53,7 @@ const getImage = (name) => {
   return null;
 };
 
-<<<<<<< HEAD
 const Perfume = ({ cart, addToCart, updateQuantity, removeFromCart }) => {
-=======
-const Perfume = () => {
->>>>>>> 85b5763689d63fec51ecae680901f8e872446b70
   const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -78,11 +68,8 @@ const Perfume = () => {
     message: "",
   });
   const [showFreeDelivery, setShowFreeDelivery] = useState(true);
-<<<<<<< HEAD
   const [cartOpen, setCartOpen] = useState(false);
   const [toast, setToast] = useState(null);
-=======
->>>>>>> 85b5763689d63fec51ecae680901f8e872446b70
 
   const handleContactChange = (e) => {
     setContactForm({ ...contactForm, [e.target.name]: e.target.value });
@@ -97,11 +84,7 @@ const Perfume = () => {
 
   const heroImage = useMemo(
     () =>
-<<<<<<< HEAD
       getImage("LuckyDraw") ||
-=======
-      getImage("Fantasticdream") ||
->>>>>>> 85b5763689d63fec51ecae680901f8e872446b70
       "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&q=80&w=500",
     [],
   );
@@ -195,7 +178,6 @@ Please confirm my order.`;
     window.open(url, "_blank");
   };
 
-<<<<<<< HEAD
   const handleAddToCart = (product) => {
     addToCart(product);
     setCartOpen(true);
@@ -210,41 +192,6 @@ Please confirm my order.`;
 
   const products = useMemo(() => {
     return signatureProducts.map((item, index) => {
-=======
-  const products = useMemo(() => {
-    const items = [
-      {
-        name: "Shehen sha",
-        variant: "Royal Essence",
-        price: 3000,
-        oldPrice: 4000,
-        discount: "25% OFF",
-      },
-      {
-        name: "Fantasticdream",
-        variant: "Floral Fantasy",
-        price: 3200,
-        oldPrice: 4200,
-        discount: "24% OFF",
-      },
-      {
-        name: "Sultanat",
-        variant: "Imperial Oud",
-        price: 2900,
-        oldPrice: 3900,
-        discount: "26% OFF",
-      },
-      {
-        name: "Dreamscent",
-        variant: "Mystic Musk",
-        price: 3500,
-        oldPrice: 4500,
-        discount: "22% OFF",
-      },
-    ];
-
-    return items.map((item, index) => {
->>>>>>> 85b5763689d63fec51ecae680901f8e872446b70
       const imageSrc =
         getImage(item.name) ||
         `https://images.unsplash.com/photo-${
@@ -299,15 +246,12 @@ Please confirm my order.`;
       <div className="fixed top-[-10%] left-[-10%] w-[40%] h-[40%] bg-amber-900/10 rounded-full blur-[120px] pointer-events-none"></div>
       <div className="fixed bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-amber-900/10 rounded-full blur-[120px] pointer-events-none"></div>
 
-<<<<<<< HEAD
+      {/* Toast Notification */}
       {toast && (
         <div className="fixed bottom-10 left-1/2 -translate-x-1/2 z-[200] bg-amber-500 text-black px-6 py-3 rounded-full font-bold shadow-[0_0_20px_rgba(245,158,11,0.4)] animate-in fade-in slide-in-from-bottom-4 duration-300">
           {toast}
         </div>
       )}
-
-=======
->>>>>>> 85b5763689d63fec51ecae680901f8e872446b70
       {/* Navigation */}
       <nav
         className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled ? "bg-black/90 backdrop-blur-xl border-b border-white/5 py-4" : "bg-transparent py-6"}`}
@@ -358,7 +302,6 @@ Please confirm my order.`;
             >
               Shopping
             </button>
-<<<<<<< HEAD
             <button
               onClick={() => setCartOpen(true)}
               className="flex items-center"
@@ -368,12 +311,6 @@ Please confirm my order.`;
                 className="text-stone-400 cursor-pointer hover:text-amber-500 transition-colors"
               />
             </button>
-=======
-            <ShoppingBag
-              size={20}
-              className="text-stone-400 cursor-pointer hover:text-amber-500 transition-colors"
-            />
->>>>>>> 85b5763689d63fec51ecae680901f8e872446b70
           </div>
         </div>
       </nav>
@@ -494,12 +431,8 @@ Please confirm my order.`;
             {products.map((p) => (
               <div
                 key={p.id}
-<<<<<<< HEAD
                 onClick={() => navigate(`/product/${p.id}`)}
                 className="group relative cursor-pointer bg-white/[0.03] backdrop-blur-xl border border-white/5 rounded-[20px] md:rounded-[40px] overflow-hidden hover:bg-white/[0.05] hover:border-amber-500/40 transition-all duration-700 p-3 md:p-5 shadow-2xl hover:shadow-[0_20px_80px_rgba(245,158,11,0.18)]"
-=======
-                className="group relative bg-white/[0.03] backdrop-blur-xl border border-white/5 rounded-[20px] md:rounded-[40px] overflow-hidden hover:bg-white/[0.05] hover:border-amber-500/40 transition-all duration-700 p-3 md:p-5 shadow-2xl"
->>>>>>> 85b5763689d63fec51ecae680901f8e872446b70
               >
                 {/* Discount Tag */}
                 <div className="absolute top-3 left-3 md:top-8 md:left-8 z-10 bg-amber-500/20 backdrop-blur-md text-amber-500 text-[8px] md:text-[9px] font-black px-2 py-1 md:px-4 md:py-1.5 rounded-full border border-amber-500/30 uppercase tracking-tighter">
@@ -516,27 +449,19 @@ Please confirm my order.`;
                   {/* Overlay Controls */}
                   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center gap-2 md:gap-5">
                     <button
-<<<<<<< HEAD
                       onClick={(e) => {
                         e.stopPropagation();
                         navigate(`/product/${p.id}`);
                       }}
-=======
-                      onClick={() => setSelectedProduct(p)}
->>>>>>> 85b5763689d63fec51ecae680901f8e872446b70
                       className="p-2 md:p-4 bg-white/10 backdrop-blur-md text-white rounded-full hover:bg-amber-500 hover:text-black transition-all transform translate-y-4 group-hover:translate-y-0"
                     >
                       <Eye size={16} className="md:w-5 md:h-5" />
                     </button>
                     <button
-<<<<<<< HEAD
                       onClick={(e) => {
                         e.stopPropagation();
                         toggleLike(p.id);
                       }}
-=======
-                      onClick={() => toggleLike(p.id)}
->>>>>>> 85b5763689d63fec51ecae680901f8e872446b70
                       className={`p-2 md:p-4 backdrop-blur-md rounded-full transition-all transform translate-y-4 group-hover:translate-y-0 ${likedProducts[p.id] ? "bg-red-500 text-white" : "bg-white/10 text-white hover:bg-red-500"}`}
                     >
                       <Heart
@@ -581,14 +506,10 @@ Please confirm my order.`;
                       </span>
                     </div>
                     <button
-<<<<<<< HEAD
                       onClick={(e) => {
                         e.stopPropagation();
                         handleAddToCart(p);
                       }}
-=======
-                      onClick={() => navigate("/shop")}
->>>>>>> 85b5763689d63fec51ecae680901f8e872446b70
                       className="w-full md:w-auto px-4 py-2 md:px-6 md:py-3 rounded-full border border-amber-500/30 text-[8px] md:text-[10px] font-bold uppercase tracking-widest hover:bg-amber-500 hover:text-black hover:shadow-[0_0_15px_rgba(245,158,11,0.4)] transition-all"
                     >
                       Add To Cart
@@ -601,7 +522,6 @@ Please confirm my order.`;
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Cart Drawer */}
       <div className={`fixed inset-0 z-[100] transition-all duration-500 ${cartOpen ? "visible" : "invisible"}`}>
         <div
@@ -703,8 +623,6 @@ Please confirm my order.`;
         </div>
       </div>
 
-=======
->>>>>>> 85b5763689d63fec51ecae680901f8e872446b70
       {/* QUICK VIEW MODAL */}
       {selectedProduct && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-6">
